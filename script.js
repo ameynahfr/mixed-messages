@@ -1,10 +1,10 @@
-// Get references to the button and the <p> tag
+
 const runButton = document.getElementById('runButton');
 const outputP = document.getElementById('output');
 
-// Define your script logic
+
 function runScript() {
-    // Your script logic here
+    
     const affirmationChallenge = {
         confidence: [
             "I am confident and capable.",
@@ -34,7 +34,7 @@ function runScript() {
         return Math.floor(Math.random() * arr.length);
     }
 
-    let outputHTML = ''; // Initialize an empty string to accumulate output
+    let outputHTML = ''; 
 
     for (const key in affirmationChallenge) {
         const category = affirmationChallenge[key];
@@ -42,9 +42,9 @@ function runScript() {
         outputHTML += `Selected Theme: ${key}<br>Affirmation: ${category[randomIndex]}<br>---<br>`;
     }
 
-    // Update the innerHTML of the <p> tag with the accumulated HTML
+  
     outputP.innerHTML = outputHTML;
 }
 
-// Add a click event listener to the button
+
 runButton.addEventListener('click', runScript);
